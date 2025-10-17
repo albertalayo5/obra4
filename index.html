@@ -28,7 +28,7 @@
       position: relative;
     }
 
-    iframe {
+    iframe{
       width: 100%;
       height: calc(100% + 54px); /* Aumenta altura para compensar recorte */
       border: none;
@@ -39,20 +39,21 @@
   </style>
 </head>
 <body>
-
+<div id="casa">
   <div class="iframe-wrapper">
-
-    <iframe
+    <iframe 
       src="https://app.powerbi.com/view?r=eyJrIjoiMzk0ZDkzN2QtOTAzZS00YTNiLWEwMmUtOWY0MDAyZGQ3MjhiIiwidCI6ImM0YTY2YzM0LTJiYjctNDUxZi04YmUxLWIyYzI2YTQzMDE1OCIsImMiOjR9"
       allowfullscreen="true">
     </iframe>
   </div>
+ </casa>
 <button id="fullscreen-btn">Ver en Pantalla Completa</button>
 </body>
 
 <script>
   // Obtener el botón por su ID
   const fullscreenBtn = document.getElementById('fullscreen-btn');
+  const miIframe = document.getElementById('casa');
 
   // Añadir un "event listener" para el clic
   fullscreenBtn.addEventListener('click', () => {
@@ -70,4 +71,3 @@
 </script>
 
 </html>
-
