@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Power BI Público - Vista Limpia</title>
@@ -37,19 +39,35 @@
   </style>
 </head>
 <body>
+
   <div class="iframe-wrapper">
+
     <iframe
       src="https://app.powerbi.com/view?r=eyJrIjoiMzk0ZDkzN2QtOTAzZS00YTNiLWEwMmUtOWY0MDAyZGQ3MjhiIiwidCI6ImM0YTY2YzM0LTJiYjctNDUxZi04YmUxLWIyYzI2YTQzMDE1OCIsImMiOjR9"
       allowfullscreen="true">
     </iframe>
   </div>
+<button id="fullscreen-btn">Ver en Pantalla Completa</button>
 </body>
+
+<script>
+  // Obtener el botón por su ID
+  const fullscreenBtn = document.getElementById('fullscreen-btn');
+
+  // Añadir un "event listener" para el clic
+  fullscreenBtn.addEventListener('click', () => {
+    // Si la página no está en pantalla completa
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen() // Pide pantalla completa para toda la página
+        .catch(err => {
+          console.error(`Error al intentar ir a pantalla completa: ${err.message}`);
+        });
+    } else {
+      // Si la página ya está en pantalla completa, sal de ella
+      document.exitFullscreen();
+    }
+  });
+</script>
+
 </html>
-
-
-
-
-
-
-
 
