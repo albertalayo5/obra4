@@ -32,9 +32,8 @@
       overflow: hidden; /* Recorta el contenido */
     /*}*/
 
-     .iframe-wrapper {
+   .iframe-wrapper {
  
-  
       position: relative;
      margin: 0 auto;
       padding: 0;
@@ -42,28 +41,20 @@
    
           
       justify-content: center;
-      width: 100vw;
-    
-     
+      width: 100%;
       
-     /* c;
-      /*height: 100%;
-      /*overflow: hidden; /* Recorta el contenido */
-     
-         /* padding-bottom: 56.25%;*/
+          
   
 }
      #casa{
  
       position: absolute;
 
-      height: calc(100vh + 60px); /* Aumenta altura para compensar recorte */
-      
+     height: 100vh;
       width:100%;
-      bottom: -60px; /* Desplaza hacia arriba para “ocultar” la barra */
+       /* Desplaza hacia arriba para “ocultar” la barra */
       border: 0;
         }
-
     
     #fullscreen-btn {
       position: absolute; /* Mantiene el botón en la misma posición de la ventana */
@@ -132,6 +123,7 @@ fullscreenBtn.addEventListener('click', () => {
 
 </script>
 </html>
+
 
 
 
