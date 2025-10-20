@@ -34,14 +34,21 @@
 
      .iframe-wrapper {
  
-      position: relative;
-     
-      width: 100vw;
-      height: 100vh;
+        position: relative;
+     margin: 0 auto;
+      padding: 0;
+      height: 100%;
    
       display: flex;
       overflow: hidden;
 
+     aspect-ratio: 16 / 9;
+     align-items: center;*/
+     display: flex;
+     justify-content: center;
+      width: 100vw;
+      overflow: hidden; /* Recorta el contenido */
+     
       
      /* c;
       /*height: 100%;
@@ -129,6 +136,7 @@ fullscreenBtn.addEventListener('click', () => {
 
 </script>
 </html>
+
 
 
 
